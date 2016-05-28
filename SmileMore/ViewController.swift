@@ -63,7 +63,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         for case let feature as CIFaceFeature in features {
 //            print(feature)
             if feature.hasSmile {
-                print("smiled")
+                NSLog("smiled")
             }
         }
 
