@@ -11,7 +11,25 @@
 		8B8C8B4D1C5731510009C818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C8B4C1C5731510009C818 /* ViewController.swift */; };
 		8B8C8B4F1C5731510009C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C8B4E1C5731510009C818 /* Assets.xcassets */; };
 		8B8C8B521C5731510009C818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C8B501C5731510009C818 /* Main.storyboard */; };
+		8BC7921B1CF9732C007DF9A2 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC792191CF9732C007DF9A2 /* ReactiveCocoa.framework */; };
+		8BC7921C1CF9732C007DF9A2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC7921A1CF9732C007DF9A2 /* Result.framework */; };
+		8BC792201CF9736F007DF9A2 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BC792191CF9732C007DF9A2 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BC792211CF9736F007DF9A2 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BC7921A1CF9732C007DF9A2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BC7921F1CF9735C007DF9A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BC792201CF9736F007DF9A2 /* ReactiveCocoa.framework in CopyFiles */,
+				8BC792211CF9736F007DF9A2 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B8C8B471C5731510009C818 /* SmileMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +38,8 @@
 		8B8C8B4E1C5731510009C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B8C8B511C5731510009C818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B8C8B531C5731510009C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BC792191CF9732C007DF9A2 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		8BC7921A1CF9732C007DF9A2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC7921B1CF9732C007DF9A2 /* ReactiveCocoa.framework in Frameworks */,
+				8BC7921C1CF9732C007DF9A2 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +60,8 @@
 			children = (
 				8B8C8B491C5731510009C818 /* SmileMore */,
 				8B8C8B481C5731510009C818 /* Products */,
+				8BC792191CF9732C007DF9A2 /* ReactiveCocoa.framework */,
+				8BC7921A1CF9732C007DF9A2 /* Result.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +95,7 @@
 				8B8C8B431C5731510009C818 /* Sources */,
 				8B8C8B441C5731510009C818 /* Frameworks */,
 				8B8C8B451C5731510009C818 /* Resources */,
+				8BC7921F1CF9735C007DF9A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -235,6 +260,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SmileMore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dolphin.smilemore.osx.SmileMore;
@@ -247,6 +276,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SmileMore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dolphin.smilemore.osx.SmileMore;
@@ -273,6 +306,7 @@
 				8B8C8B581C5731510009C818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
