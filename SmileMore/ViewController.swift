@@ -53,8 +53,12 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         if detector == nil {
             // Hmm, maybe the detector needs to be allocated on the same thread it is used?
             detector = CIDetector.init(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+            NSLog("Detector created")
         }
 //        NSThread.sleepForTimeInterval(10.0)
+//        for i in 0...10000 {
+//            i^5
+//        }
         autoreleasepool {
             guard let buffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
                 print("Buffer failed to get")
@@ -67,6 +71,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
                     NSLog("smiled")
                 }
             }
+            
         }
     }
 
